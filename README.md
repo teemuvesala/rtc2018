@@ -18,5 +18,5 @@ JSONPath expression: http://goessner.net/articles/JsonPath/
 
 ### Tools
 
-Zed Attack Proxy: https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
-Man in the middle proxy: https://mitmproxy.org/
+ * Zed Attack Proxy: https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+ * Man in the middle proxy: https://mitmproxy.org/
