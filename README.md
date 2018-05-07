@@ -42,12 +42,13 @@ These are defining how the script is executed.
 The test set is created with the following command:
 
 ```shell
-jmeter -n -t wordpress-performance-tests.jmx -p better-system.properties \\
-         -l results-$(date +"%Y-%m-%d-%H-%M") \\
-         -j log-$(date +"%Y-%m-%d-%H-%M") \\
-         -Jthreads=100 \\
-         -Jrampup=3600 \\
-         -Jduration=5400 \\
-         -Jmaxsleep=5000 \\
+jmeter -n -t wordpress-performance-tests.jmx \
+         -p full-logs.properties \
+         -l results-$(date +"%Y-%m-%d-%H-%M") \
+         -j log-$(date +"%Y-%m-%d-%H-%M") \
+         -Jthreads=100 \
+         -Jrampup=3600 \
+         -Jduration=5400 \
+         -Jmaxsleep=5000 \
          -Jminsleep=1000
 ```
