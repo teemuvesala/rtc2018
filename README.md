@@ -26,3 +26,28 @@ These are files for Romanian Testing Conference 2018 Perofmance testing workshop
 
  * Zed Attack Proxy: https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
  * Man in the middle proxy: https://mitmproxy.org/
+
+## Running JMeter
+
+Following properties are used by the wordpress-performance-tests.jmx:
+ * threads
+ * rampup
+ * duration
+ * maxsleep
+ * minsleep
+ * host
+
+These are defining how the script is executed.
+
+The test set is created with the following command:
+
+```shell
+jmeter -n -t wordpress-performance-tests.jmx -p better-system.properties \\
+         -l results-$(date +"%Y-%m-%d-%H-%M") \\
+         -j log-$(date +"%Y-%m-%d-%H-%M") \\
+         -Jthreads=100 \\
+         -Jrampup=3600 \\
+         -Jduration=5400 \\
+         -Jmaxsleep=5000 \\
+         -Jminsleep=1000
+```
